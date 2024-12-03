@@ -30,7 +30,7 @@ export default function Chat() {
               className={`rounded-lg px-4 py-2 text-md md:text-base lg:text-lg ${
                 m.role === "user"
                   ? "bg-[linear-gradient(90deg,_rgba(38,_198,_255,_0.7),_rgba(72,_225,_174,_0.7))] text-white shadow-md hover:bg-[linear-gradient(90deg,_rgba(38,_198,_255,_0.5),_rgba(72,_225,_174,_0.5))] transition-all duration-200 me-4 md:me-14 ms-auto"
-                  : "bg-gray-700 text-gray-200 shadow-lg transform hover:scale-105 transition-transform duration-200 me-auto ms-4 md:ms-14"
+                  : "bg-gray-700 text-gray-200 shadow-lg transform me-auto ms-4 md:ms-14"
               } max-w-[80%] sm:max-w-[75%] lg:max-w-[50%]`}
             >
               {formatMessageContent(m.content)}
