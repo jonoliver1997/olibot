@@ -9,7 +9,7 @@ export default function Page() {
           OliBot
         </h1>
         <p className="mt-4 text-lg md:text-xl lg:text-2xl text-gray-300">
-          Chat with an AI model in real-time. Powered by OpenAI's GPT-4.
+          Chat with an AI model in real-time. Powered by OpenAI&apos;s GPT-4.
         </p>
       </div>
       <Chat />
