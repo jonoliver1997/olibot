@@ -50,7 +50,7 @@ export default function Chat() {
       {/* Input */}
       <form
         onSubmit={(e: FormEvent) => handleSubmit(e)}
-        className="fixed bottom-0 w-full max-w-md px-4 pb-4 flex"
+        className="fixed bottom-0 w-full max-w-md px-4 pb-4 flex mb-5"
       >
         <div className="relative w-full">
           <input
