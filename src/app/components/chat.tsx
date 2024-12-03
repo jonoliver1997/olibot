@@ -44,7 +44,6 @@ export default function Chat() {
       {isLoading && (
         <div className="flex justify-center items-center space-x-2">
           <div className="loader"></div>{" "}
-          {/* Custom spinner or a tailwind spinner */}
         </div>
       )}
 
@@ -62,7 +61,7 @@ export default function Chat() {
             disabled={isLoading}
           />
 
-          {/* Stop button (inside the input field) */}
+          {/* Stop button */}
           {isLoading && (
             <button
               type="button"
