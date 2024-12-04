@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.0.5",
+    "@langchain/openai": "^0.3.14",
     "ai": "^4.0.10",
+    "langchain": "^0.3.6",
     "next": "15.0.3",
     "openai": "^4.74.0",
     "react": "19.0.0-rc-66855b96-20241106",

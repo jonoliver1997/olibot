@@ -5,7 +5,12 @@ import { FormEvent, useEffect, useRef } from "react";
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, stop } =
-    useChat();
+    useChat({
+      api: "api/chat",
+      onError: (error) => {
+        console.log(error);
+      },
+    });
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
