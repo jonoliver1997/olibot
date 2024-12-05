@@ -55,10 +55,21 @@ export async function POST(req: Request) {
 
     // Return the stream as a response
     return LangChainAdapter.toDataStreamResponse(stream);
-  } catch (error: any) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: error.status ?? 500,
-      headers: { "Content-Type": "application/json" },
-    });
+  } catch (error: unknown) {
+    // Type the error as an instance of Error
+    if (error instanceof Error) {
+      return new Response(JSON.stringify({ error: error.message }), {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+    // In case of an unknown error type
+    return new Response(
+      JSON.stringify({ error: "An unknown error occurred" }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   }
 }
